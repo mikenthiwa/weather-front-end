@@ -1,0 +1,8 @@
+{
+  "Wind": "Wind",
+  "Humidity": "Humidity",
+  "Pressure": "Pressure",
+  "Loading": "Loading",
+  "error": "Something went wrong",
+  "noData": "No data available"
+}
