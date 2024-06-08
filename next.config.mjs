@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+import nextTranslate from 'next-translate';
+
+const nextConfig = nextTranslate({
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     remotePatterns: [
       {
@@ -10,6 +14,10 @@ const nextConfig = {
       },
     ],
   },
-};
+  i18n: {
+    locales: ['en', 'sw'],
+    defaultLocale: 'en',
+  },
+});
 
 export default nextConfig;

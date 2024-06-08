@@ -1,4 +1,12 @@
-const WeatherInfo = ({ label, value, unit }: { label: string; value: number; unit: string }) => (
+import React from 'react';
+
+type WeatherInfoProps = {
+  label: React.ReactNode;
+  value: number;
+  unit: string;
+};
+
+const WeatherInfo: React.FC<WeatherInfoProps> = ({ label, value, unit }) => (
   <div className='flex flex-col items-center px-3'>
     <div>{label}</div>
     <div className='font-bold text-3xl'>

@@ -1,4 +1,5 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import React from 'react';
+import { render, screen, waitFor } from '../../../utils/test.utils';
 import '@testing-library/jest-dom';
 import useSWR from 'swr';
 import CurrentWeatherComponent from './current-weather.component';
