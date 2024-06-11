@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { TranslationProvider } from '@/context/translation.context';
+import { TranslationProvider } from '@/app/context/translation/translation.context';
+import { WeatherProvider } from '@/app/context/current-weather/current-weather.context';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -17,9 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <TranslationProvider>
-      <html lang='en'>
-        <body className={inter.className}>{children}</body>
-      </html>
+      <WeatherProvider>
+        <html lang='en'>
+          <body className={inter.className}>{children}</body>
+        </html>
+      </WeatherProvider>
     </TranslationProvider>
   );
 }

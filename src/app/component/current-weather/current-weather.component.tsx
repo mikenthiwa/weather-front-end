@@ -1,33 +1,24 @@
 'use client';
 
-import Image from 'next/image';
-import useSWR from 'swr';
-import { FormattedMessage } from 'react-intl';
-
-import WeatherInfo from '@/app/component/weather-info/weather-info.component';
-import getCurrentWeather from '@/app/services/current-weather.service';
-import { CurrentWeather } from '@/app/services/model';
 import React from 'react';
+import Image from 'next/image';
+
+import { FormattedMessage } from 'react-intl';
+import WeatherInfo from '@/app/component/weather-info/weather-info.component';
+import { useWeather } from '@/app/context/current-weather/current-weather.context';
 
 const CurrentWeatherComponent: React.FC = () => {
-  const { data, error, isLoading } = useSWR<CurrentWeather | null>(`weather?lat=4.0435&lon=39.6682&appid=`, getCurrentWeather);
-
+  const { data, isLoading } = useWeather();
   if (isLoading)
     return (
       <div>
         <FormattedMessage id='loading' defaultMessage='Loading...' />
       </div>
     );
-  if (error)
-    return (
-      <div>
-        <FormattedMessage id='error' defaultMessage='Something went wrong' />
-      </div>
-    );
   if (!data)
     return (
       <div>
-        <FormattedMessage id='noData' defaultMessage='No data available' />
+        <FormattedMessage id='error' defaultMessage='Something went wrong' />
       </div>
     );
 
