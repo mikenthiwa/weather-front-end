@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { IntlProvider } from 'react-intl';
-import { WeatherProvider } from '@/app/context/current-weather/current-weather.context';
+import { WeatherProvider } from '@/context/current-weather/current-weather.context';
 import EnglishMessages from '../assets/locales/en/common.json';
 import SwahiliMessages from '../assets/locales/sw/common.json';
 

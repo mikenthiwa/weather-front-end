@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { FormattedMessage } from 'react-intl';
 import WeatherInfo from '@/app/component/weather-info/weather-info.component';
-import { useWeather } from '@/app/context/current-weather/current-weather.context';
+import { useWeather } from '@/context/current-weather/current-weather.context';
 
 const CurrentWeatherComponent: React.FC = () => {
   const { data, isLoading } = useWeather();

@@ -2,8 +2,8 @@
 
 import React, { createContext, useContext, ReactNode, useCallback } from 'react';
 import useSWR from 'swr';
-import { CurrentWeather } from '@/app/services/model';
-import getCurrentWeather from '@/app/services/current-weather.service';
+import { CurrentWeather } from '@/services/model';
+import getCurrentWeather from '@/services/current-weather.service';
 
 interface CurrentWeatherContextType {
   data: CurrentWeather | any;
