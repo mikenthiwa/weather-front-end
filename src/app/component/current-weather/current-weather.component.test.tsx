@@ -2,10 +2,10 @@ import React from 'react';
 import { render, screen, waitFor, act } from '../../../utils/test.utils';
 import '@testing-library/jest-dom';
 import CurrentWeatherComponent from './current-weather.component';
-import { useWeather } from '@/app/context/current-weather/current-weather.context';
+import { useWeather } from '@/context/current-weather/current-weather.context';
 import { weatherData } from '../mock';
 
-jest.mock('../../context/current-weather/current-weather.context', () => ({
+jest.mock('../../../context/current-weather/current-weather.context', () => ({
   useWeather: jest.fn(),
 }));
 
