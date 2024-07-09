@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useState, useContext, ReactNode, FC } from 'react';
+import { createContext, useState, useContext, FC } from 'react';
 import { IntlProvider } from 'react-intl';
 import EnglishMessage from '@/assets/locales/en/common.json';
 import SwahiliMessage from '@/assets/locales/sw/common.json';
