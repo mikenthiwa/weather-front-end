@@ -1,6 +1,6 @@
-import axiosInstance from '@/services/index';
+import axiosInstance from '@/app/services/index';
 import { AxiosResponse } from 'axios';
-import { CurrentWeather } from '@/services/model';
+import { CurrentWeather } from '@/app/services/model';
 
 export const getCurrentWeather = async (url: string): Promise<CurrentWeather | null> => {
   try {
