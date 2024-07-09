@@ -1,7 +1,7 @@
 import axiosInstance from './index';
 import MockAdapter from 'axios-mock-adapter';
 import getCurrentWeather from './current-weather.service';
-import { weatherData } from '@/app/component/mock';
+import { weatherData } from '../component/mock';
 
 const mock = new MockAdapter(axiosInstance);
 
